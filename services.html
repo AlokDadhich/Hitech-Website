@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IT Company Website</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="icon" href="./images/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <script src="./js/main.js"></script>
+    </head>
+    
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo"><img src="./images/logo.png" alt=""></a>
+            <div class="fas fa-bars"></div>
+            <nav class="navbar">
+                <ul>
+                  <li><a href="index.html">home</a></li>
+                  <li><a href="about.html">about</a></li>
+                  <li><a href="services.html">services</a></li>
+                 <!---- <li><a href="#portfolio">portfolio</a></li> -->
+                 <!---- <li><a href="#team">team</a></li> --> 
+                  <!-- <li><a href="careers.html">career</a></li> -->
+                  <li><a href="contact.html">contact us</a></li> 
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+      <section id="services" class="services">
+        <h1>OUR SERVICES</h1>
+        <!-- <h2>with our solutions</h2> -->
+    
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </section>
+
+   
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+  
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f9f9f9;
+        color: #333;
+      }
+  
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 70px;
+      }
+  
+     .divide { 
+padding-bottom: 100px;
+    }
+      .portfolio-filter {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-top: 55px;
+      }
+  
+      .portfolio-filter button {
+        padding: 20px 35px;
+        margin: 0 10px;
+        border: none;
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        border-radius: 4px;
+      }
+  
+      .portfolio-filter button.active,
+      .portfolio-filter button:hover {
+        background: #ff6347;
+
+      }
+  
+      .portfolio-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        transition: all 1s ease;
+      }
+  
+      .portfolio-item {
+  width: calc(18% - 20px);
+  min-width: 150px;
+  height: 300px; /* 🔥 FIX: set fixed height */
+  aspect-ratio: unset; /* disable aspect-ratio if using height */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  opacity: 1;
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+  
+.portfolio-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  display: block;
+  margin: auto;
+}
+  
+      .portfolio-item.hide-animate {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+  
+      .portfolio-item.hidden {
+        display: none !important;
+      }
+  
+      @media (max-width: 992px) {
+        .portfolio-item {
+          width: calc(33.33% - 20px);
+        }
+      }
+  
+      @media (max-width: 768px) {
+        .portfolio-item {
+          width: calc(45% - 20px);
+        }
+      }
+  
+      @media (max-width: 500px) {
+        .portfolio-item {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  
+    
+    <div class="portfolio-filter">
+        <h1>What are we known for</h1>
+      <button class="active" data-filter="all"><h3>All</h3></button>
+      <button data-filter="new"><h3>New Products</h3></button>
+      <button data-filter="refurbished"><h3>Refurbished Products</h3></button>
+      <button data-filter="ServiceFinal"><h3>Services</h3></button>
+    </div>
+  
+    <div class="portfolio-items">
+      <!-- New Products -->
+      <div class="portfolio-item new">
+        <img src="images/Laptop.png" alt="Laptop (NEW)">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Desktop.png" alt="Desktop (NEW)">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Printer.png" alt="Printer">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Server.png" alt="Server">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Projector.png" alt="Projector">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Security.png" alt="Security">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Conference-Solution.png" alt="Conference-Solution">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Device-Upgradation.png" alt="Device-Upgradation">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Industrial-PC.png" alt="Industrial-PC">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Panel-PC.png" alt="Panel PC">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Interactive-Displays.png" alt="Interactive-Displays">
+      </div>
+      <div class="portfolio-item new">
+        <img src="images/Cables-converters.png" alt="Cables-converters">
+      </div>
+  
+      <!-- Refurbished Products -->
+      <div class="portfolio-item refurbished">
+        <img src="images/Refurbished-Laptop.png" alt="Refurbished-Laptop">
+      </div>
+      <div class="portfolio-item refurbished">
+        <img src="images/Refurbished-Desktop.png" alt="Refurbished-Desktop">
+      </div>
+  
+      <!-- Services -->
+      <div class="portfolio-item ServiceFinal">
+        <img src="images/Repair-Services.png" alt="Repair-Services">
+      </div>
+      <div class="portfolio-item ServiceFinal">
+        <img src="images/Server-Maintenance.png" alt="Server-Maintenance">
+      </div>
+      <div class="portfolio-item ServiceFinal">
+        <img src="images/CCTV-Maintenance.png" alt="CCTV-Maintenance">
+      </div>
+      <div class="portfolio-item ServiceFinal">
+        <img src="images/Conference-Solution.png" alt="Conference-Setup">
+      </div>
+      <div class="portfolio-item ServiceFinal">
+        <img src="images/Theatre-Setup.png" alt="Theatre-Setup">
+      </div>
+      <div class="portfolio-item ServiceFinal">
+        <img src="images/Sound-Treatment.png" alt="Sound-Treatment">
+      </div> 
+     
+    </div>
+</div>
+  
+    <script>
+      const filterButtons = document.querySelectorAll('.portfolio-filter button');
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+  
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          document.querySelector('.portfolio-filter .active').classList.remove('active');
+          button.classList.add('active');
+  
+          const filter = button.getAttribute('data-filter');
+  
+          portfolioItems.forEach(item => {
+            const isMatch = filter === 'all' || item.className.includes(filter);
+
+  
+            if (isMatch) {
+              item.classList.remove('hidden');
+              setTimeout(() => {
+                item.classList.remove('hide-animate');
+              }, 10);
+            } else {
+              item.classList.add('hide-animate');
+              setTimeout(() => {
+                item.classList.add('hidden');
+              }, 400);
+            }
+          });
+        });
+      });
+    </script>
+
+    
+      <div class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>About Us</h4>
+                        <ul>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="index.html">Home</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="about.html">About us</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="services.html">Our services</a></li>
+                        </ul>
+                    </div>
+  
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="index.html">Portfolio</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="contact.html">Contact</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+  
+                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
+                        <h4>Contact Us</h4>
+                        <p>
+                          Shop 11, Kamal Complex,<br>
+                          Nagar Rd, Kamal baug society, <br>
+                          Wagholi, Pune, Maharashtra, 412207. <br>
+                          <strong>Phone:</strong> +91 8484804741<br>
+                          <strong>Email:</strong> info@hitechpune.co.in<br>
+                        </p>
+  
+                        <!-- <div class="social-links">
+                            <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a>
+                            <a href="https://twitter.com/login?lang=en"><i class="ion-logo-twitter"></i></a>
+                            <a href="https://www.linkedin.com/"><i class="ion-logo-linkedin"></i></a>
+                            <a href="https://www.instagram.com/"><i class="ion-logo-instagram"></i></a>
+                            <a href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="ion-logo-googleplus"></i></a>
+                        </div>
+                    -->
+  
+                    </div>
+  
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                      <h4>Get in Touch</h4>
+                      <p>Send us your email and we’ll reach out to you with cutting-edge solutions tailored to elevate your brand. Stay connected for the latest in innovation and technology.</p>
+                      <form action="https://api.web3forms.com/submit" method="post">
+                          <input type="hidden" name="access_key" value="2d71d620-ae97-40f1-b587-5889ad556811">
+                          <input type="email" name="email"><input type="submit"  value="Submit">
+                      </form>
+                  </div>
+  
+                </div>
+            </div>
+        </div>
+
+            </div>
+        </div>
+
+    <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+</body>
+</html>
