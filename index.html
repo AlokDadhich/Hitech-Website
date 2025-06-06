@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Company Website</title>
+    <title>Hi-Tech Solutions</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -18,6 +18,168 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <script src="./js/main.js"></script>
+
+    <style>
+/* Container for heading and filter buttons */
+.portfolio-filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+/* Filter button container */
+.portfolio-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Filter buttons */
+.portfolio-filter button,
+.dropdown > button {
+  padding: 15px 28px;
+  border: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Active or hover effect */
+.portfolio-filter button.active,
+.portfolio-filter button:hover,
+.dropdown > button:hover {
+  background: #ff6347;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Down arrow for dropdown buttons */
+.dropdown > button::after {
+  content: " ▼";
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+/* Submenu (dropdown content) */
+.subcategories {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  min-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dropdown:hover .subcategories {
+  display: block;
+}
+
+/* Submenu buttons */
+.subcategories button {
+  width: 100%;
+  padding: 12px 16px;
+  text-align: left;
+  border: none;
+  background-color: white;
+  color: #333;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.subcategories button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Portfolio item container */
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  transition: all 1s ease;
+}
+
+/* Individual item */
+.portfolio-item {
+  width: calc(18% - 20px);
+  min-width: 150px;
+  height: 300px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  opacity: 1;
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Images in items */
+.portfolio-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  display: block;
+  margin: auto;
+}
+
+/* Animation and visibility control */
+.portfolio-item.hide-animate {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+
+
+/* Services include in index */
+
+
+
+.portfolio-item.hidden {
+  display: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .portfolio-item {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: calc(45% - 20px);
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolio-item {
+    width: 100%;
+  }
+}
+
+        
+    </style>
 </head>
 <body>
     <header class="header">
@@ -93,7 +255,7 @@
             <br>
 <br>
 <br>
-          <h1>Our Services</h1>
+          <h1>What are you looking for?</h1>
           <p>Our company philosophy has always been to <strong>help our customers solve their problems</strong> and to provide them with service <strong>before and after every sale</strong>. <strong>Customer satisfaction</strong> has always been the guiding force of our company since it was founded.</p>
         </div>
         <div class="col-lg-4 col-sm-6">
@@ -389,6 +551,8 @@
   </div>
 </section>
 -->
+
+
 
 <section id="contact" class="contact">
     <h1 class="heading">get in touch</h1>
