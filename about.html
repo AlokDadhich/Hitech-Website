@@ -20,19 +20,52 @@
     <script src="./js/main.js"></script>
 </head>
 
+<style>
+        /* Mobile Layout Adjustments */
+        @media (max-width: 767px) {
+            .service-type-gap {
+                flex-direction: column;
+            }
+            
+            /* First section: Image first, then text */
+            .service-type .Fitin:nth-child(1) .row {
+                flex-direction: column;
+            }
+            
+            /* Second section: Text first, then image */
+            .service-type .Fitin:nth-child(2) .row {
+                flex-direction: column-reverse;
+            }
+            
+            /* Third section: Image first, then text */
+            .service-type .row:nth-child(3) {
+                flex-direction: column;
+            }
+            
+            /* Fourth section: Text first, then image */
+            .service-type .row:nth-child(4) {
+                flex-direction: column-reverse;
+            }
+            
+            .col-md-6 {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+
 <body>
     <header class="header">
         <a href="index.html" class="logo"><img src="./images/logo.png" alt=""></a>
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="services.html">services</a></li>
+                 <li><a href="index.html">home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Expertise</a></li>
                <!---- <li><a href="#portfolio">portfolio</a></li> -->
                <!---- <li><a href="#team">team</a></li> --> 
                 <!-- <li><a href="careers.html">career</a></li> -->
-                <li><a href="contact.html">contact us</a></li> 
+                <li><a href="contact.html">Contact us</a></li> 
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
